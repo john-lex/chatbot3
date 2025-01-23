@@ -1,0 +1,130 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- bye
+- check_order
+- check_prices
+- check_prices_again
+- check_prices_drink
+- check_prices_size
+- deny
+- goodbye
+- greet
+- inform
+- mood_great
+- mood_unhappy
+- place_order
+- soporte
+- utter_greet_again
+- obtener_precio_pizza
+entities:
+- size_pizza
+- name
+- address
+- type_pizza
+- phone
+slots:
+  type_pizza:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: type_pizza
+  size_pizza:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: size_pizza
+  address:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: address
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  phone:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone
+  costo_pizza:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: costo_pizza
+actions:
+- utter_order_pizza
+- utter_ask_name
+- utter_ask_address
+- utter_cheer_up
+- utter_did_that_help
+- utter_confirmation_order
+- utter_greet
+- utter_ask_size_pizza
+- utter_ask_type_pizza
+- utter_aks_phone
+- action_obtener_precio_pizza
+- place_order_pizza
+responses:
+  utter_greet:
+  - text: ' Hola bienvenido a Dominos Pizza en que podemos ayudarte : '
+  utter_check_prices:
+  - text: |-
+      Claro, estos son los precios:
+       1. personal: $6.00 
+       2. mediana: $8.00
+       3. grande: $13.00
+       
+       Precios de las bebidas:
+       gaseosa personal: $5.00
+       gaseosa 1 litro: $8.00
+       gaseosa familiar: $12.00
+       
+       Precios ingredientes extra:
+       adicional de queso: $2.00
+       adicional de ingredientes: $3.00 
+  utter_show_prices_size:
+  - text: |-
+      los precios de la pizza son:
+       1. personal: $6.00 
+       2. mediana: $8.00
+       3. grande: $13.00
+       4. volver al menu anterior
+  utter_order_pizza:
+  - text: 'Estupendo, empezemos con tu orden: '
+  utter_ask_type_pizza:
+  - text: |- 
+      ¿Que tipo de pizza quieres? tenemos de:
+      mexicana , tropical , pepperoni , carne
+  utter_ask_size_pizza:
+  - text: ¿Que tamaño de pizza quieres? Pequeño, Mediano o Grande
+  utter_ask_name:
+  - text: ¿nombre de quien ordena la pizza?
+  utter_ask_address:
+  - text: ¿Direccion a donde entregar tu pizza?
+  utter_aks_phone:
+  - text: Y por ultimo ¿Dame tu numero a donde nos podamos comunicar?
+  utter_confirmation_order:
+  - text: |-
+      Tu orden ha sido registrada exitosamente, señor(a) {name} su pedido: Pizza : {type_pizza} de tamaño {size_pizza} Direccion de envio: {address} Telefono: {phone} El valor a pagar es de {costo_pizza}
+      su orden llegara de 20 a 30 minutos, gracias por preferirnos 
+  utter_cheer_up:
+  - text: animado amigo comete una pizza eso te motivara
+  utter_precio_pizza:
+  - text: "El precio de una pizza {tamaño} es {precio} dólares."
+  utter_did_that_help:
+  - text: te puedo ayudar en algo mas?
+  utter_ask_order:
+  - text: quieres realizar el pedido de una pizza
+  utter_happy:
+  - text: genial, continua
+  utter_goodbye:
+  - text: bueno, adios
+  utter_iamabot:
+  - text: yo soy un bot, creado para realizar pedidos de pizza.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

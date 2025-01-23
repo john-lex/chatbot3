@@ -1,0 +1,822 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hola
+    - como estas
+    - como estas?
+    - que tal
+    - buenas tardes
+    - buenas noches
+    - buenos dias
+    - buen dia
+    - hiya
+    - howdy
+    - yo
+    - sup
+    - what's up
+    - how's it going
+    - hey hey
+    - hi there
+    - hello hello
+    - bonjour és
+    - guten tag
+    - ciao ano
+    - namaste
+    - konnichiwa
+    - ni hao
+    - privet
+    - annyeong
+    - oi
+    - ahlan
+    - yo yo yo
+    - hey buddy
+    - hola amigo
+    - hola hola
+    - howdy partner
+    - what's crackin'
+    - ahoy
+    - greetings, earthling
+    - yo, what's good?
+    - hey you
+    - hiya, pal
+    - greetings
+    - good day
+    - how do you do?
+    - it's a pleasure to meet you
+    - salutations
+    - I hope you're well
+    - hola, ¿qué tal?
+    - hola, ¿cómo va?
+    - hola, buen día
+    - hola, ¿todo bien?
+    - hola, ¿cómo estás?
+    - hola, ¿hay pizza?
+    - hey, fancy seeing you here
+    - yo, my friend
+    - hi hi hi
+    - hey there, sunshine
+    - hola, ¿qué se cuenta?
+    - what's poppin'?
+    - quiero una pizza
+    - hola buenas noches
+    - hola buen dia
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see ya
+    - catch you later
+    - take care
+    - later
+    - peace out
+    - farewell
+    - have a good one
+    - talk to you soon
+    - see you soon
+    - take it easy
+    - goodbye for now
+    - until we meet again
+    - I bid you farewell
+    - it was nice talking to you
+    - have a wonderful day
+    - wishing you well
+    - later, gator
+    - bye for now
+    - so long
+    - gotta run
+    - I’m out
+    - see ya soon
+    - catch ya later
+    - toodles
+    - cheers
+    - bye, take care
+    - bye, see you tomorrow
+    - see you next time
+    - talk later
+    - bye, take it easy
+    - have a great day
+    - see you around, my friend
+    - bye, don’t be a stranger
+    - until next time
+    - smell ya later
+    - hasta la vista
+    - adiós amigo
+    - peace and love
+    - keep it real
+    - I’m off, bye!
+    - catch you on the flip side
+    - laters, alligators
+    - over and out
+    - deuces
+    - adiós
+    - au revoir
+    - arrivederci
+    - auf wiedersehen
+    - sayonara
+    - annyeong
+    - ciao
+    - paalam
+    - do svidaniya
+    - goodnight
+    - sweet dreams
+    - rest well
+    - nighty night
+    - sleep tight
+    - see you in the morning
+    - hasta luego
+    - nos vemos
+    - chao
+    - hasta pronto
+    - cuídate
+    - nos vemos luego
+    - hasta la próxima
+    - hasta mañana
+    - que tengas un buen día
+    - nos vemos, amigo
+    - hasta más tarde
+    - ahí nos vemos
+    - me voy
+    - hablamos luego
+    - nos vemos al rato
+    - cuídate mucho
+    - chao, chao
+    - hasta ahorita
+    - que te vaya bien
+    - fue un gusto hablar contigo
+    - que tengas un excelente día
+    - espero verte pronto
+    - me despido cordialmente
+    - hasta una próxima ocasión
+    - que estés bien
+    - que tengas una buena noche
+    - le deseo lo mejor
+    - saludos y hasta luego
+    - adiós, que tengas un lindo día
+    - hasta mañana, descansa
+    - cuídate, nos vemos pronto
+    - hablamos después, que estés bien
+    - nos vemos la próxima semana
+    - hasta la próxima vez
+    - me despido por ahora
+    - chao, nos vemos otro día
+    - ahí te ves
+    - que te sea leve
+    - adiós, y no te olvides de mí
+    - nos olemos luego
+    - chao, pescado
+    - nos vidrios
+    - ahí te quedas
+    - hasta nunca (en broma)
+    - que descanses, campeón
+    - buenas noches
+    - que tengas dulces sueños
+    - descansa bien
+    - nos vemos mañana temprano
+    - hasta mañana, duerme bien
+    - que pases una buena noche
+    - sueña bonito
+    - hasta que amanezca
+    - hasta la vista, baby
+    - see you
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - yep
+    - absolutely
+    - sure
+    - definitely
+    - exactly
+    - alright
+    - okay
+    - for sure
+    - you bet
+    - totally
+    - without a doubt
+    - that’s right
+    - no doubt
+    - you got it
+    - affirmative
+    - by all means
+    - right on
+    - yup
+    - uh-huh
+    - yeah, sure
+    - mm-hmm
+    - yeah, why not
+    - sure thing
+    - absolutely, dude
+    - yep, yep
+    - aye aye
+    - yes, that’s correct
+    - yes, I agree
+    - yes, please
+    - sure, go ahead
+    - yes, I’d love to
+    - yes, exactly
+    - yes, I’m in
+    - that’s a yes from me
+    - yes, that works for me
+    - yes, I’m sure
+    - sí
+    - claro
+    - correcto
+    - por supuesto
+    - desde luego
+    - afirmativo
+    - así es
+    - de acuerdo
+    - obviamente
+    - seguro
+    - claro que sí
+    - totalmente
+    - sin duda
+    - eso es correcto
+    - por supuesto que sí
+    - cómo no
+    - ya lo creo
+    - sí, seguro
+    - indudablemente
+    - no hay duda
+    - sí, claro
+    - ajá
+    - obvio
+    - pues sí
+    - sí, cómo no
+    - seguro que sí
+    - va
+    - sí, obvio
+    - así mero
+    - claro, va
+    - sí, estoy de acuerdo
+    - sí, eso está bien
+    - claro, hagámoslo
+    - sí, me parece perfecto
+    - sí, cuenta conmigo
+    - sí, por mí está bien
+    - sí, eso funciona
+    - claro que sí, adelante
+    - sí, eso es verdad
+    - sí, tienes toda la razón
+- intent: check_prices
+  examples: |
+    - 3. Consulta de precios 💰
+    - 3. Consulta de precios
+    - How much does it cost?
+    - What’s the price?
+    - How much is this?
+    - Can you tell me the price?
+    - What’s the price for that?
+    - How much do I need to pay?
+    - What’s the cost of this item?
+    - Can you check the price for me?
+    - What’s the price of the pizza?
+    - How much is it going to cost?
+    - How much is a large pizza?
+    - How much is a small pizza?
+    - How much is the medium pizza?
+    - What’s the cost of a pepperoni pizza?
+    - How much is the vegetarian pizza?
+    - How much does a drink cost?
+    - What’s the price of a pizza with extra cheese?
+    - How much for the combo deal?
+    - Can you give me the price for a pizza with two toppings?
+    - What’s the cost of a pizza with mushrooms and olives?
+    - Can you show me the prices?
+    - I want to know the prices of your pizzas.
+    - What’s your pricing list?
+    - How much does a pizza with all toppings cost?
+    - What’s the price range for pizzas?
+    - Are there any discounts on pizzas today?
+    - What’s the cost of delivery?
+    - How much are your drinks?
+    - Can I get a price list for everything?
+    - How much for a pizza and drink combo?
+    - ¿Cuánto cuesta?
+    - ¿Cuál es el precio?
+    - ¿Cuánto vale esto?
+    - ¿Me puedes decir el precio?
+    - ¿Cuánto cuesta eso?
+    - ¿Qué precio tiene?
+    - ¿Cuánto tengo que pagar?
+    - ¿Cuál es el costo de esto?
+    - ¿Cuánto me va a costar?
+    - ¿Qué precio tiene la pizza?
+    - ¿Cuánto cuesta una pizza [grande](size_pizza)?
+    - ¿Cuánto cuesta la pizza [pequeña](size_pizza)?
+    - ¿Cuánto vale la pizza [mediana](size_pizza)?
+    - ¿Cuál es el precio de la pizza de [pepperoni](type_pizza)?
+    - ¿Cuánto cuesta la pizza [vegetariana](type_pizza)?
+    - ¿Cuánto cuesta una bebida?
+    - ¿Cuánto cuesta la pizza con queso extra?
+    - ¿Cuál es el precio del combo?
+    - ¿Me puedes decir el precio de una pizza con dos ingredientes?
+    - ¿Cuánto vale una pizza con champiñones y aceitunas?
+    - ¿Me puedes mostrar los precios?
+    - Quiero saber los precios de las pizzas.
+    - ¿Tienen lista de precios?
+    - ¿Cuánto cuesta una pizza con todos los ingredientes?
+    - ¿Cuál es el rango de precios para las pizzas?
+    - ¿Tienen algún descuento hoy?
+    - ¿Cuánto cuesta el envío?
+    - ¿Cuánto cuestan las bebidas?
+    - ¿Me puedes dar la lista de precios de todo?
+    - ¿Cuánto cuesta el combo de pizza y bebida?
+    - Cuánto cuesta
+    - Cuál es el precio
+    - Cuánto vale esto
+    - Me puedes decir el precio
+    - Cuánto cuesta eso
+    - Qué precio tiene
+    - Cuánto tengo que pagar
+    - Cuál es el costo de esto
+    - Cuánto me va a costar
+    - Qué precio tiene la pizza
+    - Cuánto cuesta una pizza [grande](size_pizza)
+    - Cuánto cuesta la pizza [pequeña](size_pizza
+    - Cuánto vale la pizza [mediana](size_pizza)
+    - Cuál es el precio de la pizza de [pepperoni](type_pizza)
+    - Cuánto cuesta la pizza [vegetariana](type_pizza)
+    - Cuánto cuesta una bebida
+    - Cuánto cuesta la pizza con queso extra
+    - Cuál es el precio del combo
+    - Me puedes decir el precio de una pizza con dos ingredientes
+    - Cuánto vale una pizza con champiñones y aceitunas
+    - Me puedes mostrar los precios
+    - Quiero saber los precios de las pizzas
+    - Tienen lista de precios
+    - Cuánto cuesta una pizza con todos los ingredientes
+    - Cuál es el rango de precios para las pizzas
+    - Tienen algún descuento hoy
+    - Cuánto cuesta el envío
+    - Cuánto cuestan las bebidas
+    - Me puedes dar la lista de precios de todo
+    - Cuánto cuesta el combo de pizza y bebida
+- intent: place_order
+  examples: |
+    - 1. Realizar un pedido 🍕
+    - 1. Realizar un pedido
+    - I’d like to place an order
+    - I want to order a pizza
+    - I’d like to order
+    - Can I place an order?
+    - I’d like to order a large pizza
+    - I want to make a pizza order
+    - Can you take my order?
+    - Please take my order
+    - I’d like to place an order for delivery
+    - I want to order some food
+    - I’d like a pepperoni pizza
+    - Can I order a medium pizza with mushrooms?
+    - I want to order a large vegetarian pizza
+    - I’d like a pizza with extra cheese
+    - Please order a small pizza with olives
+    - I want to order a pizza with two toppings
+    - I’d like to add a drink to my order
+    - Can I order a pizza and a soda?
+    - I want a pizza with mushrooms and peppers
+    - Let me order a combo meal
+    - I want to confirm my order
+    - I’d like to confirm the details of my order
+    - Can you confirm my pizza order?
+    - Is my order ready to go?
+    - Please confirm the items in my order
+    - Can I change my order?
+    - I want to add an extra topping to my pizza
+    - Can I change the size of my pizza?
+    - I’d like to remove one topping
+    - Can you add a drink to my order?
+    - I want to cancel my order
+    - Quiero hacer un pedido
+    - Me gustaría hacer un pedido
+    - Quiero pedir una pizza
+    - ¿Puedo hacer un pedido?
+    - Quiero pedir una pizza [grande](size_pizza)
+    - Me gustaría hacer un pedido de pizza
+    - ¿Puedes tomar mi pedido?
+    - Por favor, toma mi pedido
+    - Me gustaría hacer un pedido para entrega
+    - Quiero pedir algo de comer
+    - Quiero una pizza de [pepperoni](type_pizza)
+    - ¿Puedo pedir una pizza [mediana](size_pizza) con [champiñones](type_pizza)?
+    - Quiero pedir una pizza [vegetariana](type_pizza) [grande](size_pizza)
+    - Me gustaría una pizza con queso extra
+    - Por favor, pide una pizza [pequeña](size_pizza) con aceitunas
+    - Quiero pedir una pizza con dos ingredientes
+    - Me gustaría añadir una bebida a mi pedido
+    - ¿Puedo pedir una pizza y una soda?
+    - Quiero una pizza con champiñones y pimientos
+    - Déjame pedir un combo
+    - Quiero confirmar mi pedido
+    - Me gustaría confirmar los detalles de mi pedido
+    - ¿Puedes confirmar mi pedido de pizza?
+    - ¿Está listo mi pedido?
+    - Por favor, confirma los artículos en mi pedido
+    - ¿Puedo cambiar mi pedido?
+    - Quiero añadir un ingrediente extra a mi pizza
+    - ¿Puedo cambiar el tamaño de mi pizza?
+    - Me gustaría quitar un ingrediente
+    - ¿Puedes añadir una bebida a mi pedido?
+    - Quiero cancelar mi pedido
+    - hola quier ordenar una pizza
+    - quiero realizar un pedido
+    - hola estoy pensando en realizar un pedido de una pizza
+- intent: obtener_precio_pizza
+  examples: |
+    - ¿Cuánto cuesta una pizza [grande](tamaño)?
+    - ¿Cuál es el precio de una pizza [mediana](tamaño)?
+    - Quiero saber el precio de una pizza [familiar](tamaño)
+    - ¿Cuánto vale una pizza [pequeña](tamaño)?
+    - Dame el precio de una pizza [grande](tamaño)
+- intent: check_order
+  examples: |
+    - 2. Consultar mi pedido 📋
+    - 2. Consultar mi pedido
+- intent: check_prices_size
+  examples: |
+    - ver precios de pizza segun tamaño
+- intent: check_prices_drink
+  examples: |
+    - 1. ver precios de bebidas
+- intent: check_prices_again
+  examples: |
+    - volver al menu anterior
+- intent: utter_greet_again
+  examples: |
+    - volver al menu principal
+- intent: soporte
+  examples: |
+    - 4. Ayuda y soporte 🙋‍♂️
+    - 4. Ayuda y soporte
+- intent: bye
+  examples: |
+    - 5. Salir del chat ❌
+    - 5. Salir del chat
+- intent: inform
+  examples: |
+    - Mi nombre es [Juan](name)
+    - Mi nombre es [alejandro](name)
+    - Mi nombre es [alexander](name)
+    - Mi nombre es [John](name)
+    - Mi nombre es [Jhon](name)
+    - Mi nombre es [María](name)
+    - Me llamo [Carlos](name)
+    - Quiero una pizza de [pepperoni](type_pizza)
+    - Quiero una pizza [grande](size_pizza)
+    - La dirección es [Calle 123, Ipiales](address)
+    - Mi número de teléfono es [1234567890](phone)
+    - Mi nombre es [Ana](name)
+    - Soy [Luis](name)
+    - Puedes llamarme [Beatriz](name)
+    - Me gustaría una pizza de [hawaiana](type_pizza)
+    - Prefiero una pizza [mediana](size_pizza)
+    - Mi dirección es [Avenida Siempre Viva 742, Springfield](address)
+    - Vivo en [Calle Falsa 123](address)
+    - Puedes contactarme en el [0987654321](phone)
+    - Llámame al [1122334455](phone)
+    - Mi pizza es [margarita](type_pizza)
+    - Quiero una pizza de [pollo](type_pizza)
+    - La pizza debe ser [pequeña](size_pizza)
+    - Mi dirección de entrega es [Calle Luna 456, Bogotá](address)
+    - Mi nombre es [Ana castiblanco](name)
+    - Mi nombre es [Pedro](name)
+    - Puedes decirme [Laura](name)
+    - [Calle 123, Ipiales](address)
+    - [Avenida Siempre Viva 742, Springfield](address)
+    - [Calle Falsa 123](address)
+    - [1234567890](phone)
+    - [1122334455](phone)
+    - [margarita](type_pizza)
+    - [pollo](type_pizza)
+    - [Calle Luna 456, Bogotá](address)
+    - Mi nombre completo es [Sofía Rodríguez](name)
+    - Llámame a mi número [987654321](phone)
+    - Vivo en la calle [San Juan 35, Medellín](address)
+    - Prefiero una pizza [familiar](size_pizza)
+    - Ordenar una pizza de [cuatro quesos](type_pizza)
+    - Mi dirección es [Avenida Principal 10, Cali](address)
+    - Puedes llamarme [Camila](name)
+    - Estoy en [Calle Solitaria 9, Barranquilla](address)
+    - [Calle Solitaria 9, Barranquilla](address)
+    - Mi teléfono es [2233445566](phone)
+    - Mi pizza favorita es de [vegetales](type_pizza)
+    - Quiero una pizza tamaño [extra grande](size_pizza)
+    - Puedes llamarme al [3344556677](phone)
+    - Mi dirección actual es [Calle Nueva 123, Cartagena](address)
+    - quiero una de [tropical](type_pizza)
+    - quiero una pizza [tropical](type_pizza)
+    - mi direccion es [cr 17 # 27 - 05 barrio vivienda cristiana](address)
+    - mi direccion es [calle 17 # 27 - 05 barrio vivienda cristiana](address)
+    - vivo en el [barrio vivienda cristiana](address)
+    - vivo en [cr 6 # 26 - 06 barrio vivienda cristiana](address)
+    - vivo en la [cr 6 # 26 - 06 barrio vivienda cristiana](address)
+    - vivo en la [calle 6 # 26 - 06 barrio vivienda cristiana](address)
+    - vivo en el [barrio vivienda cristiana cr 6 # 26 - 06](address)
+    - vivo en la [calle 25 barrio vivienda cristiana](address)
+    - Vivo en [Avenida Siempre Viva 742, Springfield](address)
+    - Mi dirección es [Calle Falsa 123, Bogotá](address)
+    - Vivo en [San Juan 35, Medellín](address)
+    - [Calle 17 # 27 - 05 barrio vivienda cristiana](address)
+    - mi nombre es [alexander](name) [ceballos](name)
+    - quiero una pizza [tropical](type_pizza)
+    - quiero una pizza [grande](size_pizza)
+    - vivo en el [barrio vivienda cristiana](address)
+    - me llamo [jhon ruiz](name)
+    - quiero que sea una pizza de [pepperoni](type_pizza)
+    - quiero una pizza de tamaño [mediano](size_pizza)
+    - vivo en la [carrera 7 # 15 - 06 barrio golgota](address)
+    - mi numero de cel es [3154628596](phone)
+    - mi nombre es [silvia vallejo](name)
+    - quiero una pizza de sabor [tropical](type_pizza)
+    - quiero una pizza de tamaño [grande](size_pizza)
+    - mi direccion es [calle 24 # 15 - 125 barrio miraflor](address)
+    - [3162562859](phone)
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that+
+    - not really
+    - I don’t think so
+    - don’t like that
+    - not interested
+    - absolutely not
+    - no chance
+    - not in a million years
+    - no, thank you
+    - definitely not
+    - there’s no way
+    - not a chance
+    - not happening
+    - I refuse
+    - hell no
+    - nope, not gonna happen
+    - nah, I’m good
+    - no way, dude
+    - not really feeling it
+    - no, I’m cool
+    - nope, not for me
+    - no sir
+    - ain’t gonna happen
+    - uh-uh
+    - nope, no thanks
+    - I don’t think that’s a good idea
+    - I’m not sure about that
+    - I don’t want that
+    - that’s not gonna work for me
+    - that’s not what I had in mind
+    - I’m not really up for it
+    - I’d rather not
+    - that’s not what I’m looking for
+    - I’ll pass on that
+    - I don’t agree with that
+    - nunca
+    - ni loco
+    - no, gracias
+    - no me gusta
+    - no quiero
+    - no es así
+    - no está bien
+    - no, para nada
+    - no tengo ganas
+    - de ninguna manera
+    - en absoluto
+    - para nada
+    - jamás
+    - no hay forma
+    - en lo más mínimo
+    - ni pensarlo
+    - ni en broma
+    - no lo haré
+    - no existe esa posibilidad
+    - nah
+    - no, no quiero
+    - no me va
+    - no estoy para eso
+    - ni hablar
+    - no, de ninguna forma
+    - no lo veo
+    - no me interesa
+    - no es lo mío
+    - no me parece bien
+    - no lo creo
+    - no estoy de acuerdo
+    - no lo quiero hacer
+    - no me parece que sea una buena idea
+    - no me convence
+    - mejor no
+    - no me hace ilusión
+    - no lo veo claro
+    - no tengo ganas de hacerlo
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fantastic
+    - excellent
+    - superb
+    - outstanding
+    - awesome
+    - incredible
+    - I’m on top of the world
+    - I’m feeling unstoppable
+    - I feel fantastic
+    - I’m feeling like a million bucks
+    - I’m on fire
+    - I’m living the dream
+    - I’m on cloud nine
+    - couldn’t be better
+    - I’m in heaven
+    - absolutely pumped
+    - extremely happy
+    - beyond excited
+    - so excited
+    - thrilled
+    - pumped up
+    - super happy
+    - ecstatic
+    - so so good
+    - I’m doing amazing
+    - I’m great, thanks for asking
+    - today’s been amazing
+    - I am amazing today
+    - I feel fantastic right now
+    - everything is going great
+    - I’m so happy
+    - today is just perfect
+    - I feel on top of the world
+    - perfecto
+    - genial
+    - increíble
+    - maravilloso
+    - estupendo
+    - excelente
+    - fabuloso
+    - asombroso
+    - espectacular
+    - fenomenal
+    - me siento como un rey
+    - me siento imparable
+    - me siento de maravilla
+    - estoy en la cima del mundo
+    - hoy me siento fantástico
+    - estoy en mi mejor momento
+    - me siento increíble
+    - estoy en las nubes
+    - no podría estar mejor
+    - estoy en el paraíso
+    - super emocionado
+    - totalmente feliz
+    - increíblemente feliz
+    - muy emocionado
+    - estoy super contento
+    - muy satisfecho
+    - radiante
+    - emocionado al máximo
+    - feliz a más no poder
+    - eufórico
+    - me siento muy bien
+    - estoy genial, gracias
+    - todo va perfecto hoy
+    - me siento increíble hoy
+    - hoy ha sido un día maravilloso
+    - me siento de maravilla ahora
+    - todo está saliendo genial
+    - me siento super bien
+    - hoy todo está perfecto
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - I’m feeling down
+    - I don’t feel very well
+    - I’m disappointed
+    - I feel awful
+    - I feel miserable
+    - I’m not okay
+    - I’m feeling blue
+    - not feeling great
+    - I’m extremely sad
+    - I feel so low
+    - I’m really upset
+    - I feel terrible
+    - today has been awful
+    - I’m heartbroken
+    - I’m feeling really down
+    - it’s been a tough day
+    - I’m feeling really bad
+    - everything feels wrong
+    - I’m so sad
+    - deeply sad
+    - I feel hopeless
+    - so depressed
+    - feeling gloomy
+    - feeling really down
+    - I feel empty
+    - I’m just not feeling good today
+    - nothing seems to be going right
+    - I’m in a bad mood
+    - I’ve been feeling off lately
+    - I’m having a rough day
+    - I don’t feel like myself
+    - I’m not in a good place
+    - I feel a bit down today
+    - I’ve been feeling really bad
+    - I’m not doing very well today
+    - mi día fue horrible
+    - estoy triste
+    - no me siento muy bien
+    - estoy decepcionado
+    - me siento fatal
+    - me siento mal
+    - no estoy bien
+    - me siento vacío
+    - estoy preocupado
+    - no me encuentro bien
+    - estoy extremadamente triste
+    - me siento muy mal
+    - me siento muy desanimado
+    - hoy ha sido un día terrible
+    - estoy muy decepcionado
+    - estoy devastado
+    - me siento completamente mal
+    - no puedo con esto
+    - me siento muy bajo de ánimo
+    - super triste
+    - muy triste
+    - profundamente triste
+    - siento una gran tristeza
+    - estoy tan triste
+    - estoy deprimido
+    - estoy muy apenado
+    - me siento desanimado
+    - siento que todo está mal
+    - no me siento bien hoy
+    - hoy todo va mal
+    - no estoy de buen ánimo
+    - he tenido un mal día
+    - hoy me siento realmente mal
+    - no me encuentro en mi mejor momento
+    - siento que todo está en contra
+    - me siento muy bajo hoy
+    - no me estoy sintiendo yo mismo
+    - estoy pasando por un mal momento
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

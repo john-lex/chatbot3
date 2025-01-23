@@ -1,0 +1,290 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: check all prices
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: check_prices
+    - action: utter_check_prices
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: check only prices of pizza
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: obtener_precio_pizza
+    - action: utter_check_prices
+
+- story: order pizza failed
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: order pizza one ingredients and pizza medium
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Silvia"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "Pepperoni"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "mediana"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "Calle Nueva 123, Ipiales"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "3216549870"
+    - action: place_order_pizza
+
+- story: order pizza one ingredients and pizza low
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Pedro luis"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "tropical"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "pequeña"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "Calle Nueva 123, Ipiales"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "3216549870"
+    - action: place_order_pizza
+
+- story: order pizza only neighborhood
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Pedro luis"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "tropical"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "pequeña"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "barrio santa catalina"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "3216549870"
+    - action: place_order_pizza
+
+- story: order pizza only neighborhood and city
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Pedro luis"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "tropical"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "pequeña"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "barrio san jose, ipiales"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "3216549870"
+    - action: place_order_pizza
+
+- story: order pizza direction complete
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Pedro luis"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "tropical"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "pequeña"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "carrera 7 # 45 - 26 barrio san jose, ipiales"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "3216549870"
+    - action: place_order_pizza
+
+- story: order pizza direction medium complete
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Pedro luis"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "tropical"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "pequeña"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "carrera 7 barrio los chilcos, ipiales"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "3216549870"
+    - action: place_order_pizza
+
+- story: order pizza phone start text
+  steps:
+    - intent: place_order
+    - action: utter_order_pizza
+    - action: utter_ask_name
+    - intent: inform
+      entities:
+        - name: "Pedro luis"
+    - action: utter_ask_type_pizza
+    - intent: inform
+      entities:
+        - type_pizza: "tropical"
+    - action: utter_ask_size_pizza
+    - intent: inform
+      entities:
+        - size_pizza: "pequeña"
+    - action: utter_ask_address
+    - intent: inform
+      entities:
+        - address: "carrera 7 barrio los chilcos, ipiales"
+    - action: utter_aks_phone
+    - intent: inform
+      entities:
+        - phone: "mi numero es 3216549870"
+    - action: place_order_pizza
+
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: place_order
+  - action: utter_order_pizza
+  - action: utter_ask_name
+  - intent: inform
+    entities:
+    - name: vallejo
+  - slot_was_set:
+    - name: vallejo
+  - intent: inform
+    entities:
+    - name: silvia vallejo
+  - action: utter_ask_type_pizza
+  - intent: inform
+    entities:
+    - type_pizza: tropical
+  - slot_was_set:
+    - type_pizza: tropical
+  - action: utter_ask_size_pizza
+  - intent: inform
+    entities:
+    - size_pizza: grande
+  - slot_was_set:
+    - size_pizza: grande
+  - action: utter_ask_address
+  - intent: inform
+    entities:
+    - address: 'calle 24 # 15'
+    - address: 125 barrio
+    - type_pizza: miraflor
+  - slot_was_set:
+    - type_pizza: miraflor
+  - slot_was_set:
+    - address: 125 barrio
+  - intent: inform
+    entities:
+    - address: 'calle 24 # 15 - 125 barrio miraflor'
+  - action: utter_aks_phone
+  - intent: inform
+    entities:
+    - phone: '3162562859'
+  - slot_was_set:
+    - phone: '3162562859'
+  - action: place_order_pizza
+  - action: utter_did_that_help
